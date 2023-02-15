@@ -1267,14 +1267,14 @@ int qr_encode(int level, int version, const char *source, size_t source_len, uin
 
 uint8_t qr_encode_mem_init(void)
 {
-    m_nBlockLength = malloc((QR_MAX_DATACODEWORD * sizeof(int)), 15);
+    m_nBlockLength = malloc((QR_MAX_DATACODEWORD * sizeof(int)));
     /*                                     m_nBlockLength       */
     if(m_nBlockLength == NULL)
     {
         return 0;
     }
 
-    m_byAllCodeWord = malloc(QR_MAX_ALLCODEWORD + QR_MAX_DATACODEWORD + QR_MAX_DATACODEWORD + QR_MAX_CODEBLOCK, 15);
+    m_byAllCodeWord = malloc(QR_MAX_ALLCODEWORD + QR_MAX_DATACODEWORD + QR_MAX_DATACODEWORD + QR_MAX_CODEBLOCK);
                                             /* m_byAllCodeWord      m_byBlockMode         m_byDataCodeWord      m_byRSWork */
     if(m_byAllCodeWord != NULL)
     {
