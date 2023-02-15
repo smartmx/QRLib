@@ -1289,7 +1289,7 @@ uint8_t qr_encode_mem_init(void)
     }
 
 
-    m_byModuleData = malloc(QR_MAX_MODULESIZE * QR_MAX_MODULESIZE, 15);
+    m_byModuleData = malloc(QR_MAX_MODULESIZE * QR_MAX_MODULESIZE);
                                             /* m_byModuleData */
     if(m_byModuleData == NULL)
     {
