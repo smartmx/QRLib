@@ -27,7 +27,7 @@ void show_qrcode(char *str)
     uint8_t *bitdata;
     int side;
     
-    bitdata = malloc(QR_MAX_BITDATA, 15);
+    bitdata = malloc(QR_MAX_BITDATA);
     if (bitdata != NULL)
     {
         side = qr_encode_mem_init();
